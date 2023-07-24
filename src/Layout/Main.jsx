@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { FadeLoader } from "react-spinners";
 import useAuth from "../Hooks/useAuth";
+import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 
 const Main = () => {
@@ -20,6 +21,7 @@ const Main = () => {
     <div>
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };

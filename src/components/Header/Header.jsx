@@ -14,7 +14,7 @@ const Header = () => {
     <div className="navbar-container">
       <Navbar fluid rounded>
         <Navbar.Brand>
-          <span className="font-bubblegum  self-center whitespace-nowrap lg:text-xl font-semibold dark:text-white ">Colleges</span>
+          <span className="font-bubblegum  self-center whitespace-nowrap lg:text-xl font-semibold dark:text-white ">CollegesHub</span>
         </Navbar.Brand>
 
         <div className="flex  md:order-2">
