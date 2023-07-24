@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CollageCard = ({ collage }) => {
   const { collegeImage, collegeName, admissionDates, events, researchHistory, sportsCategories, _id } = collage || {};
@@ -35,9 +36,11 @@ const CollageCard = ({ collage }) => {
           </div>
 
           <div className="card-actions ">
-            <button type="button" className="btn btn-neutral">
-              Add a Details
-            </button>
+            <Link to={`/collage-details/${_id}`}>
+              <button type="button" className="btn btn-neutral">
+                Add a Details
+              </button>
+            </Link>
           </div>
         </div>
       </div>
