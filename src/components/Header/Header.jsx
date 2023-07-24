@@ -2,11 +2,14 @@ import { Avatar, Dropdown, Navbar } from "flowbite-react";
 
 import { CgProfile } from "react-icons/cg";
 import { FiLogOut } from "react-icons/fi";
+import useAuth from "../../Hooks/useAuth";
 import ActiveLink from "./ActiveLink";
 
 const Header = () => {
-  const user = false;
-  const handleLogOut = () => {};
+  const { user, logOut } = useAuth();
+  const handleLogOut = () => {
+    logOut();
+  };
   return (
     <div className="navbar-container">
       <Navbar fluid rounded>
