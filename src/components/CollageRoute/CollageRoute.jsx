@@ -1,8 +1,9 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from "react";
-import CollageCard from "./CollageCard";
+import CollageCard from "../collage/CollageCard";
+import CollageRouteCard from "./CollageRouteCard";
 
-const Collage = () => {
+const CollageRoute = () => {
   const [collages, setCollages] = useState([]);
   useEffect(() => {
     fetch("https://collage-server-delta.vercel.app/collage")
@@ -10,12 +11,12 @@ const Collage = () => {
       .then((data) => setCollages(data));
   }, []);
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {collages.slice(0, 3).map((collage) => (
-        <CollageCard key={collage._id} collage={collage} />
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 collage-container">
+      {collages.map((collage) => (
+        <CollageRouteCard key={collage._id} collage={collage} />
       ))}
     </div>
   );
 };
 
-export default Collage;
+export default CollageRoute;

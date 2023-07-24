@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const CollageCard = ({ collage }) => {
   const { collegeImage, collegeName, admissionDates, events, researchHistory, sportsCategories, _id } = collage || {};
+
   return (
     <div>
       <div className="card card-compact h-full  bg-base-100 shadow-xl group">
@@ -27,13 +28,6 @@ const CollageCard = ({ collage }) => {
           <p>
             Research History -{researchHistory.start} -{researchHistory.end}
           </p>
-          <div className="card-actions ">
-            {sportsCategories.map((sports, idx) => (
-              <div key={idx} className="badge tracking-wide font-medium badge-outline capitalize group-hover:text-lime-500 montserrat">
-                {sports}
-              </div>
-            ))}
-          </div>
 
           <div className="card-actions ">
             <Link to={`/collage-details/${_id}`}>

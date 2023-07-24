@@ -1,5 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
+
+import Admission from "../components/Admisstion/Admisstion";
+import CollageRoute from "../components/CollageRoute/CollageRoute";
 import ErrorPage from "../components/ErrorPgae/ErrorPage";
 import Home from "../components/Home/Home";
 import Login from "../components/Login/Login/Login";
@@ -27,13 +30,21 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
+        path: "/colleges",
+        element: <CollageRoute />,
+      },
+      {
+        path: "/admission",
+        element: <Admission />,
+      },
+      {
         path: "/collage-details/:id",
         element: (
           <PrivateRoutes>
             <CollageDetails />
           </PrivateRoutes>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/collage/${params.id}`),
+        loader: ({ params }) => fetch(`https://collage-server-delta.vercel.app/collage/${params.id}`),
       },
     ],
   },
