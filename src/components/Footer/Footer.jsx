@@ -31,12 +31,12 @@ const Footer = () => {
             </ul>
           </div>
           <div className="text-gray-50 ">
-            <h2 className="text-2xl mb-4 font-bold">Product</h2>
+            <h2 className="text-2xl mb-4 font-bold">Our facilities</h2>
             <ul className="space-y-3 chef-footer ">
-              <li>Prototype</li>
+              <li>It support</li>
               <li>Plans & Pricing </li>
-              <li>Customers</li>
-              <li>Integrations</li>
+              <li>Sport</li>
+              <li>Research equipment</li>
             </ul>
           </div>
           <div className="text-gray-50 ">
